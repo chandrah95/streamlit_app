@@ -1,0 +1,1 @@
+# gw lagi ngetes bgsd 
