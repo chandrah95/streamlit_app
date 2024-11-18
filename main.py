@@ -1,19 +1,7 @@
 import streamlit as st
+import streamlit_authenticator as stauth
 import pandas as pd
+import re
 
-def login_menu():
-    st.header('Astro UTM')
-    with st.form(key ='login', clear_on_submit = True, border = True):
-        username = st.text_input('Username')
-        password = st.text_input('Password')
-        col1,col2,col3,col4 = st.columns(4)
-        with col1:
-            submit = st.form_submit_button('Submit')
-        with col2:
-            cancel = st.form_submit_button('Cancel')
-        
-        if submit:
-            st.write('Welcome!\n')
-            st.write(username)  
-
-login_menu()
+st.image('Astro_Mother Brand_Logo_FA_Full Color.png',width = 200,output_format = 'auto')
+st.title('Astro UTM - Campaign Manager')
