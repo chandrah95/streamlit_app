@@ -1,6 +1,5 @@
 import streamlit as st
 import streamlit_authenticator as stauth
-from streamlit_authenticator.utilities.hasher import Hasher
 import pandas as pd
 import re
 
@@ -36,7 +35,7 @@ def load_auth():
 def clear_cache():
     load_auth.clear()
 
-d['usernames'],d['hashed_passwords'],d['names'],d['usersId'] = load_auth()
+d['usersId'],d['usernames'],d['passwords'],d['hashed_passwords'],d['names'] = load_auth()
 
 credentials = {
     'usernames' : {
