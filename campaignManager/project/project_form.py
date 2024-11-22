@@ -3,6 +3,13 @@ import pandas as pd
 from datetime import date,timedelta,datetime,time
 
 def project_form():
+    st.set_page_config(
+    page_title='Campaign Form',
+    page_icon='📋',
+    layout='wide',
+    initial_sidebar_state='expanded'
+    )
+
     st.subheader('Project Form')
 
     pf1,pf2,pf3 = st.columns([2,2,2])
@@ -25,5 +32,12 @@ def project_form():
         with end_time_input:
             end_time_select = st.time_input('End Time',end_time)
 
+    sb1,sb2,sb3 = st.columns([2,2,2])
+    with sb1:
+        cols = st.columns([1,1])
+        with cols[0]:
+            submit_button = st.button('Submit')
+        with cols[1]:
+            cancel_button = st.button('Cancel')
 
 project_form()

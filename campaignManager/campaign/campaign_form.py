@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from datetime import date, timedelta,datetime,time
-# from campaignManager.utils.utils import *
+# from campaignManager.sessionstate.sessions import *
 
 def campaign_form():
     butarget = ['Retails','AK','AG','AB','FR']
@@ -60,39 +60,23 @@ def campaign_form():
     with pg1:
         with st.container():
             buyer_target_options = buyer_target 
-            for i, (buyer_target, values) in enumerate(zip(st.session_state['buyer_targets'], st.session_state['buyer_target_value'])):
-                available_options = [opt for opt in buyer_target_options if opt not in st.session_state['buyer_targets'] or opt == buyer_target]
-                cols = st.columns([2,1,1])
-                with cols[0]:
-                    st.session_state['buyer_targets'][i] = st.selectbox(f'Buyer Target{i + 1}', available_options, index = available_options.index(buyer_target), key = f'buyer_target_{i}')
-                with cols[1]:
-                    st.session_state['buyer_target_value'][i] = st.number_input('Value',min_value = 0, step = 1,value = int(values), key = f'value_{i}')
-                with cols[2]:
-                    st.caption('')
-                    st.caption('')
-                    if st.button('❌', key=f'delete_buyer_target_{i}'):
-                        del st.session_state['buyer_targets'][i]
-                        del st.session_state['buyer_target_value'][i]
-                        st.rerun()
+            cols = st.columns([2,1,1])
+            with cols[0]:
+                buyer_target_fill= st.selectbox('Buyer Target',buyer_target)
+            with cols[1]:
+                buyer_target_value_fill = st.number_input('Value',min_value = 0, step = 1)
+            with cols[2]:
+                st.caption('')
+                st.caption('')
+    
+    sb1,sb2,sb3 = st.columns([1,1,1])
+    with sb1:
+        cols = st.columns([1,1,1,1])
+        with cols[0]:
+            submit_button = st.button('Submit')
+        with cols[1]:
+            cancel_button = st.button('Cancel')
+        
 
-    # p2c1, p2c2 = st.columns([2, 2])
-    # with p2c1:
-    #     st.subheader('Budget')
-    #     with st.container():
-    #         options = budget_options
-    #         for i, (grouping, budget) in enumerate(zip(st.session_state['activity_groupings'], st.session_state['activity_grouping_budgets'])):
-    #             available_options = [opt for opt in options if opt not in st.session_state['activity_groupings'] or opt == grouping]
-    #             cols = st.columns([2, 1, 1])
-    #             with cols[0]:
-    #                 st.session_state['activity_groupings'][i] = st.selectbox(f'Activity {i + 1}', available_options, index=available_options.index(grouping), key=f'activity_{i}')
-    #             with cols[1]:
-    #                 st.session_state['activity_grouping_budgets'][i] = st.number_input(f'Budget for {grouping}', min_value=0, step=1, value=int(budget), key=f'budget_{i}')
-    #             with cols[2]:
-    #                 st.caption('')
-    #                 st.caption('')
-    #                 if st.button('❌', key=f'delete_activity_{i}'):
-    #                     del st.session_state['activity_groupings'][i]
-    #                     del st.session_state['activity_grouping_budgets'][i]
-    #                     st.rerun()
 
 campaign_form()
