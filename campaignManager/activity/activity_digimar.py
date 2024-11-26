@@ -19,7 +19,7 @@ def activity_digimar():
     budget_type = ['In App Promotion','Marketing & Digital','Ads Revenue']
 
     st.set_page_config(
-    page_title = 'Activity Form - KOL',
+    page_title = 'Activity Form - Digital Marketing',
     page_icon='📋',
     layout='wide',
     initial_sidebar_state='auto'

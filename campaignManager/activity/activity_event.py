@@ -13,7 +13,7 @@ def activity_event():
     budget_type = ['In App Promotion','Marketing & Digital','Ads Revenue']
 
     st.set_page_config(
-    page_title = 'Activity Form - KOL',
+    page_title = 'Activity Form - Event',
     page_icon='📋',
     layout='wide',
     initial_sidebar_state='auto'
