@@ -53,6 +53,8 @@ authenticator = stauth.Authenticate(
 
 name,authentication_status,username = authenticator.login('main')
 
+st.session_state['main_page']
+
 if authentication_status:
     user_data = d['usersId'][d['usersId']['email'] == username]
     user_id = user_data['id'].values[0]
