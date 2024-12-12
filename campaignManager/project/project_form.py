@@ -4,7 +4,7 @@ from datetime import date,timedelta,datetime,time
 
 def project_form():
     st.set_page_config(
-    page_title='Campaign Form',
+    page_title='Project Form',
     page_icon='📋',
     layout='wide',
     initial_sidebar_state='expanded'
