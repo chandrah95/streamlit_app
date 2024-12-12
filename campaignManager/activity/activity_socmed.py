@@ -81,7 +81,7 @@ def activity_socmed():
     with pd1:
         sm_product_id = st.text_input('Product ID')
     with pd2:
-        sm_product_image = st.text_input('Product Image')
+        sm_product_image = st.text_input('Image URL')
     
     st.markdown('---')
     st.write(':grey[**Primary Goal**]')
@@ -98,8 +98,8 @@ def activity_socmed():
                 buyer_target_value_fill = st.number_input('Buyer Target Value',min_value = 0, step = 1)
                 L0BO_value_fill = st.number_input('L0 Business Objective Value',min_value = 0, step = 1)
                 L1BO_value_fill = st.number_input('L1 Business Objective Value',min_value = 0, step = 1   )
-        with pg2:
-            iaa_behavior_obj = st.selectbox('Behavior Objective',options = behavior_objective, index = None, placeholder = 'Select Option')
+    with pg2:
+            socmed_behavior_obj = st.selectbox('Behavior Objective',options = behavior_objective, index = None, placeholder = 'Select Option')
             st.caption('')
             st.caption('')
 

@@ -111,10 +111,10 @@ def activity_iaa():
                 buyer_target_value_fill = st.number_input('Buyer Target Value',min_value = 0, step = 1)
                 L0BO_value_fill = st.number_input('L0 Business Objective Value',min_value = 0, step = 1)
                 L1BO_value_fill = st.number_input('L1 Business Objective Value',min_value = 0, step = 1   )
-        with pg2:
-            iaa_behavior_obj = st.selectbox('Behavior Objective',options = behavior_objective, index = None, placeholder = 'Select Option')
-            st.caption('')
-            st.caption('')
+    with pg2:
+        iaa_behavior_obj = st.selectbox('Behavior Objective',options = behavior_objective, index = None, placeholder = 'Select Option')
+        st.caption('')
+        st.caption('')
 
     st.markdown('---')
     st.subheader(':grey[**Secondary Goal**]')

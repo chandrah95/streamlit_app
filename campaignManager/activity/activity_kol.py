@@ -63,10 +63,10 @@ def activity_kol():
     st.markdown('---')
     st.subheader(':grey[**Primary Goal**]')
 
-    pg1,pg2 = st.columns([2,2])
+    pg1,pg2 = st.columns([3,2])
     with pg1:
         with st.container():
-            cols = st.columns([5,3,1])
+            cols = st.columns([2,1])
             with cols[0]:
                 buyer_target_fill= st.selectbox('Buyer Target',buyer_target)
                 L0BO_fill = st.selectbox('L0 Business Objective',L0BO)
@@ -75,9 +75,9 @@ def activity_kol():
                 buyer_target_value_fill = st.number_input('Buyer Target Value',min_value = 0, step = 1)
                 L0BO_value_fill = st.number_input('L0 Business Objective Value',min_value = 0, step = 1)
                 L1BO_value_fill = st.number_input('L1 Business Objective Value',min_value = 0, step = 1   )
-            with cols[2]:
-                st.caption('')
-                st.caption('')
+    with pg2:
+            iap_behavior_objective = st.selectbox('Behavior Objective', options = behavior_objective, index = None, placeholder = 'Select Option')
+
 
     st.markdown('---')
     st.subheader(':grey[**Secondary Goal**]')
