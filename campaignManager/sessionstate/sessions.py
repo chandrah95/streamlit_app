@@ -201,4 +201,99 @@ def initialize_session_state():
         st.session_state['socmed_secondary_goal_value'] = []
     
     # Initialize session state in activity In App Asset form
+    if 'iaa_act_name' not in st.session_state:
+        st.session_state['iaa_act_name'] = []
+    if 'iaa_budget_type' not in st.session_state:
+        st.session_state['iaa_budget_type'] = []
+    if 'iaa_budget_value' not in st.session_state:
+        st.session_state['iaa_budget_value'] = []
+    if 'iaa_ads_revenue_type' not in st.session_state:
+        st.session_state['iaa_ads_revenue_type'] = []
+    if 'iaa_ads_revenue_value' not in st.session_state:
+        st.session_state['iaa_ads_revenue_value'] = []
+    if 'iaa_kv_type' not in st.session_state:
+        st.session_state['iaa_kv_type'] = []
+    if 'iaa_slot_request' not in st.session_state:
+        st.session_state['iaa_slot_request'] = []
+    if 'iaa_max_discount' not in st.session_state:
+        st.session_state['iaa_max_discount'] = []
+    if 'iaa_avg_discount' not in st.session_state:
+        st.session_state['iaa_avg_discount'] = []
+    if 'iaa_brand_support' not in st.session_state:
+        st.session_state['iaa_brand_support'] = []
+    if 'iaa_type_of_discount' not in st.session_state:
+        st.session_state['iaa_type_of_discount'] = []
+    if 'iaa_ribbon' not in st.session_state:
+        st.session_state['iaa_ribbon'] = []
+    if 'iaa_promo_copy' not in st.session_state:
+        st.session_state['iaa_promo_copy'] = []
+    if 'iaa_secondary_promo_copy' not in st.session_state:
+        st.session_state['iaa_secondary_promo_copy'] = []
+    if 'iaa_remarks' not in st.session_state:
+        st.session_state['iaa_remarks'] = []
+    if 'iaa_cta' not in st.session_state:
+        st.session_state['iaa_cta'] = []
+    if 'iaa_objective' not in st.session_state:
+        st.session_state['iaa_objective'] = []
+    if 'iaa_brand_logo' not in st.session_state:
+        st.session_state['iaa_brand_logo'] = []
+    if 'iaa_kv_reference' not in st.session_state:
+        st.session_state['iaa_kv_reference'] = []
+    if 'iaa_product_id' not in st.session_state:
+        st.session_state['iaa_product_id'] = []
+    if 'iaa_image_url' not in st.session_state:
+        st.session_state['iaa_image_url'] = []
+    if 'iaa_buyer_target' not in st.session_state:
+        st.session_state['iaa_buyer_target'] = []
+    if 'iaa_L0BO' not in st.session_state:
+        st.session_state['iaa_L0BO'] = []
+    if 'iaa_L1BO' not in st.session_state:
+        st.session_state['iaa_L1BO'] = []
+    if 'iaa_buyer_target_value' not in st.session_state:
+        st.session_state['iaa_buyer_target_value'] = []
+    if 'iaa_L0BO_value' not in st.session_state:
+        st.session_state['iaa_L0BO_value'] = []
+    if 'iaa_L1BO_value' not in st.session_state:
+        st.session_state['iaa_L1BO_value'] = []
+    if 'iaa_behavior_objective' not in st.session_state:
+        st.session_state['iaa_behavior_objective'] = []
+    if 'iaa_secondary_goal' not in st.session_state:
+        st.session_state['iaa_secondary_goal'] = []
+    if 'iaa_secondary_goal_value' not in st.session_state:
+        st.session_state['iaa_secondary_goal_value'] = []
     
+    # Initialize session state in In App Promotion form
+    if 'iap_act_name' not in st.session_state:
+        st.session_state['iap_act_name'] = []
+    if 'iap_budget_type' not in st.session_state:
+        st.session_state['iap_budget_type'] = []
+    if 'iap_budget_value' not in st.session_state:
+        st.session_state['iap_budget_value'] = []
+    if 'iap_campaign_name' not in st.session_state:
+        st.session_state['iap_campaign_name'] = []
+    if 'iap_campaign_type' not in st.session_state:
+        st.session_state['iap_campaign_type'] = [] 
+    if 'iap_no_skp_internal' not in st.session_state:
+        st.session_state['iap_no_skp_internal'] = []
+    if 'iap_no_skp_reference' not in st.session_state:
+        st.session_state['iap_no_skp_reference'] = []
+    if 'iap_keterangan' not in st.session_state:
+        st.session_state['iap_keterangan'] = []
+    if 'iap_buyer_target' not in st.session_state:
+        st.session_state['iap_buyer_target'] = []
+    if 'iap_L0BO' not in st.session_state:
+        st.session_state['iap_L0BO'] = []
+    if 'iap_L1BO' not in st.session_state:
+        st.session_state['iap_L1BO'] = []
+    if 'iap_buyer_target_value' not in st.session_state:
+        st.session_state['iap_buyer_target_value'] = []
+    if 'iap_L0BO_value' not in st.session_state:
+        st.session_state['iap_L0BO_value'] = []
+    if 'iap_L1BO_value' not in st.session_state:
+        st.session_state['iap_L1BO_value'] = []
+    if 'iap_behavior_objective' not in st.session_state:
+        st.session_state['iap_behavior_objective'] = []
+    if 'iap_secondary_goal' not in st.session_state:
+        st.session_state['iap_secondary_goal'] = []
+    if 'iap_secondary_goal_value' not in st.session_state:
+        st.session_state['iap_secondary_goal_value'] = []
